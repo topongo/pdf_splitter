@@ -1,10 +1,9 @@
 import webbrowser
 from argparse import ArgumentParser
 import pypdf
-from os.path import exists, join
+from os.path import exists
 from os import mkdir
 from shutil import move, rmtree
-import logging
 from itertools import pairwise
 from uuid import uuid4
 from pathlib import Path
