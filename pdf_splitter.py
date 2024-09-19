@@ -18,6 +18,7 @@ def process_page_range(reader, start, end):
     if name := input(f"Name pdf from pages {start} {end} (leave blank to ignore): "):
         name = name.replace("%b", "BARITONE")
         name = name.replace("%e", "EUPHONIUM")
+        name = name.replace("%t", "TROMBONE")
         move(r_name, f"{name}.pdf")
 
 
@@ -67,7 +68,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-    argp = ArgumentParser(prog="pdf_splitter")
+    argp = ArgumentParser(prog="pdf_splitter", description="Pages are splitted and the output will be put on the current folder")
     argp.add_argument("file", metavar="FILE", help="Input file to split")
     arguments = argp.parse_args()
     exit(main(arguments))
